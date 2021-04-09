@@ -16,10 +16,10 @@ body {
     padding: 0 16px;
     line-height: 1.6;
 }
-
+/*
 header#banner {
     margin: 25px 0;
-}
+}*/
 
 header#banner a {
     color: #313a3d;
@@ -37,9 +37,9 @@ header#banner h2 {
     margin: 0 8px 0 0;
 }
 
-header#banner nav {
+/* header#banner nav {
     display: inline-block;
-}
+} */
 
 header#banner nav ul {
     list-style-type: none;
@@ -136,7 +136,7 @@ main#content ul#posts li a:hover small {
 
 /* single.html styles */
 main#content header#post-header h1 {
-    display: block;
+    /*display: block;*/
     font-size: 23px;
     font-size: 2.3rem;
     line-height: 1.15;

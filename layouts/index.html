@@ -1,4 +1,7 @@
 {{ define "main" }}
 {{ .Content }}
+{{ with .Site.Params.header -}}
+    <p>{{ . }}</p>
+{{ end }}
 {{- partial "posts.html" . -}}
 {{ end }}
