@@ -30,3 +30,11 @@ $ hugo server -t etch
 Use the [sample configuration](https://github.com/LukasJoswiak/etch/wiki/Configuration#sample-configuration) as a starting point. See the [configuration](https://github.com/LukasJoswiak/etch/wiki/Configuration) page for more info.
 
 Read the [wiki](https://github.com/LukasJoswiak/etch/wiki) to learn about more options.
+
+
+## Modified content
+
+* Support GA option for [Google analytics](https://analytics.google.com/)
+* Make homepage title more bigger than before
+* Add opengraph.html render in head
+* Support show blog env in footer
