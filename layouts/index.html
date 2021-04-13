@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ .Content }}
 {{ with .Site.Params.header -}}
-    <p>{{ . | safeHTML }}</p>
-{{ end }}
+    <p>{{- . | safeHTML -}}</p>
+{{ end -}}
 {{- partial "posts.html" . -}}
 {{ end }}
