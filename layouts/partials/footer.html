@@ -1,7 +1,12 @@
 <footer id="footer">
     {{ .Site.Params.copyright | safeHTML }}
     {{ $blog_version := getenv "BLOG_VERSION" }}
+    {{ $blog_build_date := getenv "BLOG_BUILD_DATE"}}
     {{ if gt (len $blog_version) 0}}
-    <br>rev: {{ $blog_version }}
+    <br />
+    rev: {{ $blog_version }}
+    {{ if gt (len $blog_build_date) 0}}
+    date: {{ $blog_build_date }}
+    {{ end -}}
     {{ end -}}
 </footer>
