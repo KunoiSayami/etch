@@ -1,12 +1,9 @@
 <footer id="footer">
     {{ .Site.Params.copyright | safeHTML }}
     {{ $blog_version := getenv "BLOG_VERSION" }}
-    {{ $blog_build_date := getenv "BLOG_BUILD_DATE"}}
-    {{ if gt (len $blog_version) 0}}
     <br />
+    {{ if gt (len $blog_version) 0}}
     rev: {{ $blog_version }}
-    {{ if gt (len $blog_build_date) 0}}
-    date: {{ $blog_build_date }}
     {{ end -}}
-    {{ end -}}
+    date: {{ now.Format "Mon, 02 Jan 2006 15:04:05 MST"}}
 </footer>
