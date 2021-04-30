@@ -1,6 +1,9 @@
 {{ define "main" }}
 <article>
     <header id="post-header">
+        {{ if eq (len .Title) 0}}
+        {{ warnf "You should add page title on %q" .Path}}
+        {{ end }}
         <h1>{{ .Title }}</h1>
             <div>
             {{- if isset .Params "date" -}}
