@@ -41,5 +41,5 @@
     {{ $css := $resources | resources.Concat "css/style.css" | minify }}
     {{ printf `<link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
 
-    <title>{{ .Title }} {{- if not .IsHome  -}}- {{ .Site.Title }} {{- end -}}</title>
+    <title>{{ .Title }} {{ if not .IsHome -}}- {{ .Site.Title }} {{- end -}}</title>
 </head>
