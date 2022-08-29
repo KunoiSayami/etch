@@ -5,15 +5,15 @@
         {{ warnf "You should add page title on %q" .Path}}
         {{ end }}
         <h1>{{ .Title }}</h1>
-            <div>
-            {{- if isset .Params "date" -}}
-                {{ if eq .Lastmod .Date }}
-                <time>{{ .Date.Format "January 2, 2006" }}</time>
-                {{ else }}
-                Updated <time>{{ .Lastmod.Format "January 2, 2006" }}</time>
-                {{ end }}
-            {{- end -}}
-            </div>
+        <div>
+        {{- if isset .Params "date" -}}
+            {{ if eq .Lastmod .Date }}
+                <time>{{ .Date | time.Format (i18n "post.created") }}</time>
+            {{ else }}
+                <time>{{ .Lastmod | time.Format (i18n "post.updated") }}</time>
+            {{ end }}
+        {{- end -}}
+        </div>
     </header>
     {{- .Content -}}
 </article>
